@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  planner:
+    build: .
+    volumes:
+      - .:/app
