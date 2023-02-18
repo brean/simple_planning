@@ -1,0 +1,43 @@
+<package>
+  <description brief="Run different planner using docker.">
+    To quickly test and benchmark your pddl on different planner. Currently using popf, popf2 or ff(ha).
+  </description>
+  <author>Andreas Bresser/andreas.bresser@dfki.de</author>
+  <maintainer>Andreas Bresser/andreas.bresser@dfki.de</maintainer>
+  <!-- Use the short version name from: https://spdx.org/licenses/ -->
+  <license>BSD-3-Clause</license>
+
+  <url>https://github.com/brean/simple_planning</url>
+  <logo>https://www.dfki.de/fileadmin/user_upload/DFKI/Medien/Logos/Logos_DFKI/DFKI_Logo.png</logo>
+
+  <keywords>
+    <keyword>utilities</keyword> <!--kw1 currently used as Category in Software Catalog -->
+    <keyword>docker</keyword>
+  </keywords>
+
+  <stage>0</stage>
+  <use>single project</use>
+  <!-- <use>multi project</use> -->
+  <!-- <use>external</use> -->
+
+  <activity>active</activity>
+  <!-- <activity>pending</activity> -->
+  <!-- <activity>discontinued</activity> -->
+
+  <classifiers><!-- (optional) -->
+    <!-- The idea of "classifiers" is to provide additional meta data about the software,
+         for example, which programming language has been used, what is the target platform,
+         is it compatible with any robotic middleware. The idea is similar to classifiers
+         in the Python package index
+    (https://packaging.python.org/tutorials/distributing-packages/#classifiers)
+         but we don't have a predefined list of allowed classifiers. -->
+    <classifier>utilities</classifier>
+    <classifier>planning</classifier><!-- your (robotics) framework -->
+    <classifier>docker</classifier>
+    <classifier>Development Status :: 3 - Alpha</classifier>
+  </classifiers>
+
+  <!-- (optional) add your dependencies -->
+  <!-- depend package="base/types" /-->
+  <!-- depend package="control/hyrodyn" optional="1" /-->
+</package>

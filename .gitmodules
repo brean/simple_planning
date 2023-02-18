@@ -1,0 +1,6 @@
+[submodule "popf2"]
+	path = popf2
+	url = https://github.com/mortacious/popf2.git
+[submodule "popf"]
+	path = popf
+	url = https://github.com/fmrico/popf.git

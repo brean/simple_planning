@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  ff:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-ff
+    volumes:
+      - ./pddl:/pddl
+    command: [
+      "-o",
+      "/pddl/domain.pddl",
+      "-f",
+      "/pddl/problem.pddl"]
+
+  popf2:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-popf2
+    volumes:
+      - ./pddl:/pddl
+    command: [
+      "/pddl/domain.pddl",
+      "/pddl/problem.pddl"]
+
+  popf:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-popf
+    volumes:
+      - ./pddl:/pddl
+    command: [
+      "/pddl/domain.pddl",
+      "/pddl/problem.pddl"]

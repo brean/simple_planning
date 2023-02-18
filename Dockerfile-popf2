@@ -1,0 +1,26 @@
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \
+    libc-dev \
+    coinor-libcbc-dev \
+    coinor-libclp-dev \
+    coinor-libcoinutils-dev \
+    cmake \
+    make \
+    g++ \
+    bison \
+    bash \
+    flex \
+  && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY ./popf2 /popf2
+
+RUN chmod +x /popf2/build
+WORKDIR /popf2
+RUN ./build
+
+WORKDIR /app
+ENTRYPOINT [ "/popf2/compile/popf2/popf3-clp" ]

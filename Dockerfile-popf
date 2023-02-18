@@ -1,0 +1,23 @@
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \
+    libc-dev \
+    coinor-libcbc-dev \
+    coinor-libclp-dev \
+    coinor-libcoinutils-dev \
+    cmake \
+    make \
+    g++ \
+    bison \
+    bash \
+    flex \
+  && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY ./popf /popf
+
+RUN cd /popf && cmake CMakeLists.txt && make -j 8
+
+ENTRYPOINT [ "/popf/src/popf/popf" ]
