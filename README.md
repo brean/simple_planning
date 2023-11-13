@@ -8,7 +8,7 @@ Included planner:
 
 **simple_planning** was initiated and is currently developed at the [Robotics Innovation Center](http://robotik.dfki-bremen.de/en/startpage.html) of the [German Research Center for Artificial Intelligence (DFKI)](http://www.dfki.de) in Bremen.
 
-![](doc/images/DFKI_Logo_e_schrift.jpg)
+![](doc/images/DFKI_RIC_RGB.jpg)
 
 ## Motivation
 Unify how to call a planer and benchmark different planner quickly.
